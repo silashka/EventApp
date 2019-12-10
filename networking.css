@@ -1,0 +1,392 @@
+body {
+  font-family: Roboto, "Arial";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+/* --------------------START PAGE -------------------- */
+.content-start {
+  display: none;
+  position: fixed;
+  top: 20%;
+  text-align: center;
+}
+.title-start {
+  font-family: Ubuntu, "Arial";
+
+  font-size: 32px;
+  line-height: 37px;
+
+  text-align: center;
+
+  color: #010125;
+}
+.description-start {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  margin-top: 16px;
+  margin-bottom: 60px;
+
+  color: #010125;
+}
+.start-button {
+  font-size: 20px;
+  line-height: 23px;
+  border: none;
+  border-radius: unset;
+  width: 116px;
+  height: 44px;
+}
+
+/* --------------------OFFER and SEEK-------------------- */
+
+.offer-content {
+  display: none;
+  position: fixed;
+  top: 20%;
+  max-width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.seek-content {
+  display: none;
+  position: fixed;
+  top: 20%;
+  max-width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.description {
+  font-weight: normal;
+  color: #010125;
+}
+h2.title,
+h2.title-seek {
+  font-family: Ubuntu, "Arial";
+  font-size: 32px;
+  line-height: 37px;
+
+  color: #010125;
+}
+.offer-word {
+  color: #3b00ff;
+}
+.seek-word {
+  color: #ff6700;
+}
+.list li {
+  font-size: 14px;
+  line-height: 16px;
+  min-height: 52px;
+  max-width: 490px;
+  border: 1px solid #dde9ee;
+  border-radius: 4px;
+  margin: 0;
+  margin-bottom: 14px;
+  padding-left: 20px;
+  padding-right: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  position: relative;
+}
+.btn-list {
+  padding: 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+}
+.list li:first-child {
+  margin-top: 28px;
+}
+.list li:last-child {
+  margin-bottom: 40px;
+}
+.list li:hover {
+  background: #f6f9f9;
+}
+.list button:hover {
+  background: #f6f9f9;
+}
+li.active-offer {
+  border: 1px solid #3b00ff;
+  background-color: #ffffff;
+}
+li.active-offer::after {
+  position: absolute;
+  content: "";
+  top: 15px;
+  right: 18px;
+
+  width: 20px;
+  height: 20px;
+
+  background-image: url("img/Vector-blue.svg");
+}
+li.active-seek {
+  border: 1px solid #ff6700;
+  background-color: #ffffff;
+}
+.active-seek::after {
+  position: absolute;
+  content: "";
+  top: 15px;
+  right: 18px;
+
+  width: 20px;
+  height: 20px;
+
+  background-image: url("img/Vector-orange.svg");
+}
+ul.active-seek::after {
+  position: absolute;
+  content: "";
+  top: 10px;
+  right: ;
+
+  width: 16.67px;
+  height: 16.67px;
+
+  background-image: url("img/Vector-orange.svg");
+}
+.list-in-list {
+  display: none;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: all ease 0.8s;
+}
+.list-in-list li {
+  max-height: 40px;
+  max-width: 230px;
+  display: flex;
+}
+
+.list-in-list li:first-child {
+  margin-right: 10px;
+}
+.btn {
+  text-align: center;
+  color: #ffffff;
+
+  background: #3b00ff;
+}
+.btn-seek {
+  background: #ff6700;
+}
+
+/* --------------------PROFILE-------------------- */
+.my-page {
+  /* display: none; */
+  /* position: fixed;
+  top: 20%; */
+  max-width: 460px;
+
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.side-nav {
+  padding-right: 10px;
+  padding-left: 60px;
+}
+.menu-item {
+  font-family: Ubuntu, "Arial";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+  color: #010125;
+  max-width: 270px;
+  min-height: 44px;
+  cursor: pointer;
+  position: relative;
+}
+.swipe svg {
+  position: absolute;
+  right: 85%;
+  width: 24px;
+  height: 24px;
+}
+.profile svg {
+  position: absolute;
+  right: 86%;
+  width: 18px;
+  height: 20px;
+}
+.matches svg {
+  position: absolute;
+  right: 85%;
+  width: 20px;
+  height: 20px;
+}
+.menu-item:hover {
+  color: #3b00ff;
+  background-color: #f0f2f9;
+}
+
+/* .swipe::before {
+  position: absolute;
+  content: "";
+  left: -50%;
+
+  width: 24px;
+  height: 24px;
+  background-image: url("img/Like.svg");
+}
+
+.profile::before {
+  position: absolute;
+  content: "";
+  left: -47%;
+
+  width: 18px;
+  height: 20px;
+  background-image: url("img/icon-user.svg");
+}
+.matches::before {
+  position: absolute;
+  content: "";
+  left: -47%;
+
+  width: 20px;
+  height: 20px;
+  background-image: url("img/icon-mes.svg");
+} */
+.card {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+.card-name {
+  font-family: Ubuntu, "Arial";
+  font-size: 32px;
+  line-height: 37px;
+
+  text-align: center;
+
+  color: #010125;
+}
+.card-title {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+
+  text-align: center;
+
+  color: #768893;
+}
+
+.img-card {
+  text-align: center;
+  margin-top: 31px;
+  margin-bottom: 23px;
+}
+.card-body {
+  padding-bottom: 0;
+}
+.card-body p {
+  font-family: Ubuntu, "Arial";
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+
+  color: #010125;
+}
+.card-body ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-body li {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #010125;
+
+  border: 1px solid #dde9ee;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 76px;
+  height: 32px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  text-align: center;
+}
+.card-body li:nth-child(2) {
+  width: 190px;
+}
+.card-body li:nth-child(4),
+.card-body li:nth-child(5) {
+  width: 116px;
+}
+.list-seeks,
+.list-offers {
+  margin-top: 11px;
+}
+li.active-of {
+  border: 1px solid #3b00ff;
+  background-color: #ffffff;
+}
+li.active-s {
+  border: 1px solid #ff6700;
+  background-color: #ffffff;
+}
+.page-footer {
+  margin-top: 160px;
+  /* max-width: 297px; */
+}
+.list-footer {
+  position: relative;
+}
+.list-footer li {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 19px;
+  opacity: 0.5;
+  position: relative;
+}
+.list-footer a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #768893;
+}
+
+.nope svg {
+  position: absolute;
+  bottom: 2%;
+  right: 110%;
+
+  width: 20px;
+  height: 20px;
+}
+.next svg {
+  position: absolute;
+  bottom: 2%;
+  right: 110%;
+
+  width: 47px;
+  height: 20px;
+}
+.icon-like svg {
+  position: absolute;
+  bottom: 2%;
+  left: 110%;
+
+  width: 20px;
+  height: 20px;
+}
