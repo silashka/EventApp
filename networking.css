@@ -1,5 +1,5 @@
 body {
-  font-family: Roboto, "Arial";
+  font-family: "Roboto", Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -17,7 +17,7 @@ ul {
   text-align: center;
 }
 .title-start {
-  font-family: Ubuntu, "Arial";
+  font-family: "Ubuntu", Arial, sans-serif;
 
   font-size: 32px;
   line-height: 37px;
@@ -47,7 +47,7 @@ ul {
 /* --------------------OFFER and SEEK-------------------- */
 
 .offer-content {
-  display: none;
+  /* display: none; */
   position: fixed;
   top: 20%;
   max-width: 100%;
@@ -66,9 +66,10 @@ ul {
   font-weight: normal;
   color: #010125;
 }
+
 h2.title,
 h2.title-seek {
-  font-family: Ubuntu, "Arial";
+  font-family: "Ubuntu", Arial, sans-serif;
   font-size: 32px;
   line-height: 37px;
 
@@ -80,49 +81,83 @@ h2.title-seek {
 .seek-word {
   color: #ff6700;
 }
-.list li {
+.item,
+.item-seek {
+  display: block;
+  text-align: left;
+  font-family: "Roboto", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
   font-size: 14px;
   line-height: 16px;
+
   min-height: 52px;
+  width: 100%;
   max-width: 490px;
+
   border: 1px solid #dde9ee;
   border-radius: 4px;
-  margin: 0;
+  background-color: #ffffff;
+
   margin-bottom: 14px;
+  padding-top: 17px;
+  padding-bottom: 17px;
   padding-left: 20px;
   padding-right: 30px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
 
   position: relative;
 }
-.btn-list {
-  padding: 0;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: bold;
-  border: none;
-  outline: none;
-  background-color: #ffffff;
-}
+
 .list li:first-child {
   margin-top: 28px;
 }
 .list li:last-child {
   margin-bottom: 40px;
 }
-.list li:hover {
+.list-in-list {
+  display: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: all ease 0.8s;
+  max-width: 490px;
+  margin: 10px auto;
+}
+.list-in-list li {
+  display: inline-block;
+  min-height: 40px;
+  min-width: 230px;
+  width: min-content;
+  padding-right: 40px;
+}
+
+.list-in-list li:first-child {
+  margin-top: 0;
+}
+.list-in-list li:last-child {
+  margin-bottom: 4px;
+}
+
+.item:hover,
+.item-seek:hover {
   background: #f6f9f9;
 }
-.list button:hover {
-  background: #f6f9f9;
-}
-li.active-offer {
+.active-offer {
   border: 1px solid #3b00ff;
   background-color: #ffffff;
 }
-li.active-offer::after {
+.active-offer::after {
+  position: absolute;
+  content: "";
+  top: 15px;
+  right: 18px;
+
+  width: 24px;
+  height: 24px;
+
+  background-image: url("img/Vector-blue.svg");
+  background-repeat: no-repeat;
+}
+.list-in-list .active-offer::after {
   position: absolute;
   content: "";
   top: 15px;
@@ -133,11 +168,23 @@ li.active-offer::after {
 
   background-image: url("img/Vector-blue.svg");
 }
-li.active-seek {
+.active-seek {
   border: 1px solid #ff6700;
   background-color: #ffffff;
 }
 .active-seek::after {
+  position: absolute;
+  content: "";
+  top: 15px;
+  right: 18px;
+
+  width: 24px;
+  height: 24px;
+
+  background-image: url("img/Vector-orange.svg");
+  background-repeat: no-repeat;
+}
+.list-in-list .active-seek::after {
   position: absolute;
   content: "";
   top: 15px;
@@ -148,33 +195,28 @@ li.active-seek {
 
   background-image: url("img/Vector-orange.svg");
 }
-ul.active-seek::after {
-  position: absolute;
-  content: "";
-  top: 10px;
-  right: ;
-
-  width: 16.67px;
-  height: 16.67px;
-
-  background-image: url("img/Vector-orange.svg");
-}
-.list-in-list {
-  display: none;
-
-  padding-left: 10px;
-  padding-right: 10px;
-  transition: all ease 0.8s;
-}
-.list-in-list li {
-  max-height: 40px;
-  max-width: 230px;
+.count {
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background: #3b00ff;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0;
+}
+.count span {
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #ffffff;
+}
+.btn-list {
+  display: flex;
+  padding-right: 20px;
+  justify-content: space-between;
 }
 
-.list-in-list li:first-child {
-  margin-right: 10px;
-}
 .btn {
   text-align: center;
   color: #ffffff;
@@ -187,7 +229,7 @@ ul.active-seek::after {
 
 /* --------------------PROFILE-------------------- */
 .my-page {
-  /* display: none; */
+  display: none;
   /* position: fixed;
   top: 20%; */
   max-width: 460px;
@@ -200,7 +242,7 @@ ul.active-seek::after {
   padding-left: 60px;
 }
 .menu-item {
-  font-family: Ubuntu, "Arial";
+  font-family: "Ubuntu", Arial, sans-serif;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
@@ -269,7 +311,7 @@ ul.active-seek::after {
   border: none;
 }
 .card-name {
-  font-family: Ubuntu, "Arial";
+  font-family: "Ubuntu", Arial, sans-serif;
   font-size: 32px;
   line-height: 37px;
 
@@ -296,7 +338,7 @@ ul.active-seek::after {
   padding-bottom: 0;
 }
 .card-body p {
-  font-family: Ubuntu, "Arial";
+  font-family: "Ubuntu", Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
   display: flex;
@@ -326,13 +368,6 @@ ul.active-seek::after {
   margin-right: 6px;
   margin-bottom: 6px;
   text-align: center;
-}
-.card-body li:nth-child(2) {
-  width: 190px;
-}
-.card-body li:nth-child(4),
-.card-body li:nth-child(5) {
-  width: 116px;
 }
 .list-seeks,
 .list-offers {
