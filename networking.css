@@ -109,7 +109,7 @@ h2.title-seek {
   padding-top: 17px;
   padding-bottom: 17px;
   padding-left: 20px;
-  padding-right: 30px;
+  padding-right: 33px;
 
   position: relative;
 }
@@ -156,7 +156,7 @@ h2.title-seek {
   position: absolute;
   content: "";
   top: 15px;
-  right: 18px;
+  right: 15px;
 
   width: 24px;
   height: 24px;
@@ -184,7 +184,7 @@ h2.title-seek {
   position: absolute;
   content: "";
   top: 15px;
-  right: 18px;
+  right: 15px;
 
   width: 24px;
   height: 24px;
@@ -206,22 +206,41 @@ h2.title-seek {
 
 .count-offer {
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   background: #3b00ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-right: 0;
+  padding: 4px;
 }
 .count-seek {
   border-radius: 50%;
   width: 20px;
   height: 20px;
   background: #ff6700;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+
   margin-right: 0;
   padding: 4px;
 }
@@ -232,9 +251,18 @@ h2.title-seek {
   color: #ffffff;
 }
 .btn-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  padding-right: 20px;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  padding-right: 20px;
 }
 .btn-seek {
   background: #ff6700;
@@ -245,82 +273,97 @@ h2.title-seek {
 .my-page {
   /* display: none; */
   /* position: fixed;
-  top: 20%;
-  left: 10%; */
+  top: 20%; */
   padding-right: 20px;
   padding-left: 20px;
 }
 .side-nav {
   padding-right: 10px;
   padding-left: 60px;
-  margin-right: 240px;
+  /* margin-right: 240px; */
 }
 .menu-item {
   font-family: "Ubuntu", Arial, sans-serif;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+
   padding-left: 60px;
   color: #010125;
-  max-width: 270px;
   min-height: 44px;
+  max-width: 270px;
+  width: 100%;
   border: none;
   background: #ffffff;
   position: relative;
 }
 .swipe svg {
   position: absolute;
-  right: 65%;
+  right: 85%;
   width: 24px;
   height: 24px;
 }
 .profile svg {
   position: absolute;
-  right: 75%;
+  right: 86%;
   width: 18px;
   height: 20px;
 }
+
 .matches svg {
   position: absolute;
-  right: 72%;
+  right: 85%;
   width: 20px;
   height: 20px;
 }
-/* .menu-item:hover {
-  color: #3b00ff;
-  background-color: #f0f2f9;
-} */
-
-/* .swipe::before {
-  position: absolute;
-  content: "";
-  left: -50%;
-
-  width: 24px;
-  height: 24px;
-  background-image: url("img/Like.svg");
+.menu-item span {
+  position: relative;
 }
-
-.profile::before {
+.count-matches {
   position: absolute;
-  content: "";
-  left: -47%;
+  bottom: 10px;
+  right: 15%;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background: #3b00ff;
 
-  width: 18px;
-  height: 20px;
-  background-image: url("img/icon-user.svg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  
 }
-.matches::before {
-  position: absolute;
-  content: "";
-  left: -47%;
+.match-num {
+  font-family: "Ubuntu", Arial, sans-serif
 
-  width: 20px;
-  height: 20px;
-  background-image: url("img/icon-mes.svg");
-} */
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  color: #ffffff;
+}
+.menu-item-active + svg path{
+  font-weight: bold;
+  background-color: #ede5ff;
+  color: #3B00FF;
+  fill: #3B00FF;
+}
 .card {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   border: none;
@@ -360,7 +403,11 @@ h2.title-seek {
 }
 
 .card-body ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .list-seeks li,
@@ -368,8 +415,17 @@ h2.title-seek {
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   color: #010125;
@@ -377,11 +433,11 @@ h2.title-seek {
   border: 1px solid #dde9ee;
   box-sizing: border-box;
   border-radius: 4px;
-  width: 76px;
-  height: 32px;
+  min-width: 76px;
+  min-height: 32px;
+  padding: 10px;
   margin-right: 6px;
   margin-bottom: 6px;
-  text-align: center;
 }
 .list-seeks,
 .list-offers {
@@ -397,7 +453,6 @@ li.active-s {
 }
 .page-footer {
   margin-top: 160px;
-  /* max-width: 297px; */
 }
 .list-footer {
   position: relative;
