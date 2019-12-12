@@ -276,6 +276,7 @@ h2.title-seek {
   top: 20%; */
   padding-right: 20px;
   padding-left: 20px;
+
 }
 .side-nav {
   padding-right: 10px;
@@ -287,50 +288,43 @@ h2.title-seek {
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
-
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: block;
+  text-align: left;
 
   padding-left: 60px;
   color: #010125;
   min-height: 44px;
   max-width: 270px;
   width: 100%;
+
   border: none;
   background: #ffffff;
+
   position: relative;
 }
 .swipe svg {
   position: absolute;
-  right: 85%;
+  left: 20px;
   width: 24px;
   height: 24px;
 }
 .profile svg {
   position: absolute;
-  right: 86%;
+  left: 24px;
   width: 18px;
   height: 20px;
 }
 
 .matches svg {
   position: absolute;
-  right: 85%;
+  left: 24px;
   width: 20px;
   height: 20px;
 }
-.menu-item span {
-  position: relative;
-}
 .count-matches {
   position: absolute;
-  bottom: 10px;
-  right: 15%;
+  top:5px;
+  left: 34px;
   border-radius: 50%;
   width: 16px;
   height: 16px;
@@ -358,12 +352,15 @@ h2.title-seek {
   line-height: 13px;
   color: #ffffff;
 }
-.menu-item-active + svg path{
+.menu-item-active svg path{
+
+  fill: #3B00FF;
+}
+.menu-item-active {
   font-weight: bold;
   background-color: #ede5ff;
   color: #3B00FF;
-  fill: #3B00FF;
-}
+  }
 .card {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   border: none;
@@ -452,7 +449,7 @@ li.active-s {
   background-color: #ffffff;
 }
 .page-footer {
-  margin-top: 160px;
+  margin-top: 140px;
 }
 .list-footer {
   position: relative;
