@@ -276,12 +276,13 @@ h2.title-seek {
   top: 20%; */
   padding-right: 20px;
   padding-left: 20px;
+  margin-top: 60px;
 
 }
 .side-nav {
   padding-right: 10px;
   padding-left: 60px;
-  margin-right: 200px;
+  margin-right: 160px;
 }
 .menu-item {
   font-family: "Ubuntu", Arial, sans-serif;
@@ -305,6 +306,7 @@ h2.title-seek {
 }
 .swipe svg {
   position: absolute;
+  bottom: 10px;
   left: 20px;
   width: 24px;
   height: 24px;
@@ -354,7 +356,6 @@ h2.title-seek {
   color: #ffffff;
 }
 .menu-item-active svg path{
-
   fill: #3B00FF;
 }
 .menu-item-active {
